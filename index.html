@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,13 +17,15 @@
 body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:#fff;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 .container{width:min(1120px,90%);margin:auto}
-header{position:fixed;top:0;width:100%;z-index:10;background:#070914d9;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}
+
+header{position:fixed;top:0;width:100%;z-index:10;background:#070914e8;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}
 nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:Orbitron,sans-serif;font-size:19px;font-weight:800;letter-spacing:2px}
-.logo span{color:var(--blue)}
+.logo{font-family:Orbitron,sans-serif;font-size:19px;font-weight:800;letter-spacing:2px;white-space:nowrap}
+.logo span{background:linear-gradient(100deg,#69c7ff,#a58aff);background-clip:text;-webkit-background-clip:text;color:transparent}
 .navlinks{display:flex;gap:30px;color:#c4c8d6;font-size:13px}
 .navlinks a:hover{color:var(--blue)}
-.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.menu{display:none;background:none;border:0;color:white;font-size:25px;cursor:pointer}
+
 .hero{min-height:760px;padding:170px 0 100px;display:flex;align-items:center;position:relative;overflow:hidden}
 .glow{position:absolute;width:600px;height:600px;right:-150px;top:100px;background:radial-gradient(circle,#276cff32,transparent 68%);pointer-events:none}
 .glow2{position:absolute;width:500px;height:500px;left:-250px;bottom:-180px;background:radial-gradient(circle,#8545ff22,transparent 70%);pointer-events:none}
@@ -34,31 +36,39 @@ h1{font-family:Orbitron,sans-serif;font-size:clamp(40px,7vw,78px);line-height:1.
 .btn{display:inline-block;padding:15px 24px;border-radius:8px;background:linear-gradient(110deg,#258dff,#7954ed);font-size:13px;font-weight:700;box-shadow:0 8px 35px #387bff35;transition:.25s}
 .btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px #387bff60}
 .btn-outline{border:1px solid #ffffff35;background:transparent;box-shadow:none;margin-left:10px}
+
 section{padding:100px 0}
 .section-title{text-align:center;font-family:Orbitron,sans-serif;font-size:clamp(25px,4vw,38px);margin-bottom:15px}
 .section-desc{text-align:center;color:var(--muted);font-size:14px;line-height:1.8;max-width:600px;margin:0 auto 50px}
+
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:-20px;position:relative}
 .stat,.card{background:linear-gradient(145deg,#11172a,#0b0e1b);border:1px solid #ffffff12;border-radius:15px;padding:28px}
 .stat{text-align:center}
 .stat strong{font-family:Orbitron;color:#76baff;font-size:30px}
 .stat p{color:var(--muted);font-size:12px;margin-top:10px}
+
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{transition:.3s}
 .card:hover{transform:translateY(-6px);border-color:#458fff77}
 .card-icon{width:48px;height:48px;border-radius:12px;background:#286bff20;color:#79baff;display:grid;place-items:center;font-size:23px;margin-bottom:23px}
 .card h3{font-size:17px;margin-bottom:12px}
 .card p{font-size:13px;color:var(--muted);line-height:1.8}
+
 .product-panel{border:1px solid #ffffff15;border-radius:20px;padding:55px 35px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#2859a52b,transparent 65%),#0c1020}
 .product-panel h3{font-family:Orbitron;font-size:25px;margin-bottom:18px}
-.product-panel p{color:var(--muted);line-height:1.9;font-size:14px;max-width:650px;margin:auto auto 28px}
+.product-panel p{color:var(--muted);line-height:1.9;font-size:14px;max-width:650px;margin:0 auto 28px}
+
 .download{background:linear-gradient(120deg,#101a35,#17112d);border:1px solid #5c83ff35;border-radius:20px;text-align:center;padding:65px 25px}
 .download p{color:var(--muted);margin:18px auto 28px;max-width:550px;line-height:1.8;font-size:14px}
+
 footer{border-top:1px solid #ffffff12;padding:35px 0;color:#858da3;font-size:12px}
 .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
 @media(max-width:700px){
 .navlinks{display:none;position:absolute;top:76px;left:0;width:100%;background:#0b1020;padding:25px;flex-direction:column;gap:22px}
 .navlinks.show{display:flex}
 .menu{display:block}
+.logo{font-size:15px;letter-spacing:1px}
 .hero{min-height:680px;padding-top:145px}
 .stats,.cards{grid-template-columns:1fr}
 .btn{margin-bottom:10px}
@@ -69,11 +79,14 @@ section{padding:75px 0}
 </head>
 
 <body>
+
 <header>
 <div class="container">
 <nav>
-<a class="logo" href="#home">DL<span>.</span> LIGHTING</a>
-<button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('show')">☰</button>
+<a class="logo" href="#home">DUMAI <span>LIGHTING</span></a>
+
+<button class="menu" aria-label="Buka menu" onclick="document.querySelector('.navlinks').classList.toggle('show')">☰</button>
+
 <div class="navlinks">
 <a href="#home">HOME</a>
 <a href="#products">PRODUCTS</a>
@@ -86,12 +99,18 @@ section{padding:75px 0}
 </header>
 
 <main>
+
 <div class="hero" id="home">
-<div class="glow"></div><div class="glow2"></div>
+<div class="glow"></div>
+<div class="glow2"></div>
+
 <div class="container">
 <div class="tag">INNOVATION IN RGB LIGHTING</div>
+
 <h1>CONTROL<br>YOUR <span class="gradient">LIGHT.</span></h1>
+
 <p>Discover a new experience in RGB lighting technology. Designed to bring intelligent control, dynamic effects, and futuristic style into every lighting project.</p>
+
 <a href="#products" class="btn">EXPLORE PRODUCTS ↗</a>
 <a href="#about" class="btn btn-outline">DISCOVER MORE</a>
 </div>
@@ -99,9 +118,20 @@ section{padding:75px 0}
 
 <div class="container">
 <div class="stats">
-<div class="stat"><strong>60+</strong><p>DYNAMIC RGB EFFECTS</p></div>
-<div class="stat"><strong>DUAL</strong><p>MATRIX TECHNOLOGY</p></div>
-<div class="stat"><strong>SMART</strong><p>WIRELESS CONTROL</p></div>
+<div class="stat">
+<strong>60+</strong>
+<p>DYNAMIC RGB EFFECTS</p>
+</div>
+
+<div class="stat">
+<strong>DUAL</strong>
+<p>MATRIX TECHNOLOGY</p>
+</div>
+
+<div class="stat">
+<strong>SMART</strong>
+<p>WIRELESS CONTROL</p>
+</div>
 </div>
 </div>
 
@@ -109,6 +139,7 @@ section{padding:75px 0}
 <div class="container">
 <h2 class="section-title">OUR <span class="gradient">PRODUCTS</span></h2>
 <p class="section-desc">Technology built to transform ordinary lighting into extraordinary experiences.</p>
+
 <div class="product-panel">
 <div class="tag">DUMAI LIGHTING SIGNATURE</div>
 <h3>RGB MATRIX SYSTEM</h3>
@@ -122,10 +153,25 @@ section{padding:75px 0}
 <div class="container">
 <h2 class="section-title">BUILT FOR <span class="gradient">EXCELLENCE</span></h2>
 <p class="section-desc">Powerful features. Simple control. A distinctive lighting experience.</p>
+
 <div class="cards">
-<div class="card"><div class="card-icon">✦</div><h3>60 RGB Effects</h3><p>Explore a wide range of dynamic lighting animations and colorful visual experiences.</p></div>
-<div class="card"><div class="card-icon">⌁</div><h3>Smart Control</h3><p>Control your lighting wirelessly from your Android smartphone.</p></div>
-<div class="card"><div class="card-icon">▦</div><h3>Dual Matrix</h3><p>Designed for synchronized lighting across two LED matrix panels.</p></div>
+<div class="card">
+<div class="card-icon">✦</div>
+<h3>60 RGB Effects</h3>
+<p>Explore a wide range of dynamic lighting animations and colorful visual experiences.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">⌁</div>
+<h3>Smart Control</h3>
+<p>Control your lighting wirelessly from your Android smartphone.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">▦</div>
+<h3>Dual Matrix</h3>
+<p>Designed for synchronized lighting across two LED matrix panels.</p>
+</div>
 </div>
 </div>
 </section>
@@ -141,19 +187,29 @@ section{padding:75px 0}
 <div class="container">
 <div class="download">
 <div class="tag">OFFICIAL ANDROID APPLICATION</div>
+
 <h2 class="section-title">YOUR LIGHT.<br><span class="gradient">YOUR CONTROL.</span></h2>
+
 <p>Experience DUMAI LIGHTING through our Android application. Connect, customize, and control your RGB Matrix system with ease.</p>
+
 <a href="mailto:dumailighting@gmail.com" class="btn">APP COMING SOON</a>
 </div>
 </div>
 </section>
+
 </main>
 
 <footer>
 <div class="container footer-row">
-<div><strong style="color:white">DUMAI LIGHTING</strong><br><br>Innovation in RGB Lighting Technology.</div>
+<div>
+<strong style="color:white">DUMAI LIGHTING</strong>
+<br><br>
+Innovation in RGB Lighting Technology.
+</div>
+
 <div>© 2026 DUMAI LIGHTING. All rights reserved.</div>
 </div>
 </footer>
+
 </body>
 </html>
