@@ -2,1126 +2,854 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#070914">
-<meta name="description" content="DUMAI LIGHTING - Premium RGB Lighting Technology and Official Store.">
-<title>DUMAI LIGHTING | Official Website & Store</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --bg:#070914;
-  --panel:#101629;
-  --blue:#48aaff;
-  --purple:#9565ff;
-  --white:#ffffff;
-  --muted:#a1a9bd;
-  --green:#20c879;
-  --border:rgba(255,255,255,.10);
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Inter,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--white);
-  overflow-x:hidden;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-button,input{
-  font:inherit;
-}
-
-.container{
-  width:min(1140px,90%);
-  margin:auto;
-}
-
-.gradient{
-  background:linear-gradient(100deg,#68c7ff,#a58aff);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-
-/* NAVIGATION */
-
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:100;
-  background:rgba(7,9,20,.91);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--border);
-}
-
-nav{
-  min-height:78px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.logo{
-  font-family:Orbitron,sans-serif;
-  font-weight:800;
-  font-size:19px;
-  letter-spacing:1.5px;
-  white-space:nowrap;
-}
-
-.logo span{
-  color:var(--blue);
-}
-
-.navlinks{
-  display:flex;
-  align-items:center;
-  gap:27px;
-  color:#c4c8d6;
-  font-size:12px;
-  font-weight:600;
-}
-
-.navlinks a:hover{
-  color:var(--blue);
-}
-
-.menu-btn{
-  display:none;
-  color:white;
-  background:none;
-  border:0;
-  font-size:26px;
-  cursor:pointer;
-}
-
-/* BUTTONS */
-
-.btn{
-  display:inline-block;
-  padding:15px 23px;
-  border-radius:8px;
-  background:linear-gradient(110deg,#258dff,#7954ed);
-  color:white;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.5px;
-  transition:.3s;
-  border:0;
-  cursor:pointer;
-}
-
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 10px 35px #387bff55;
-}
-
-.btn-outline{
-  background:transparent;
-  border:1px solid #ffffff40;
-  box-shadow:none;
-}
-
-.btn-green{
-  background:linear-gradient(110deg,#16b86f,#078a57);
-}
-
-.tag{
-  display:inline-block;
-  padding:9px 15px;
-  border:1px solid #48aaff55;
-  border-radius:30px;
-  color:#83c5ff;
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:2px;
-  margin-bottom:24px;
-}
-
-/* HERO */
-
-.hero{
-  min-height:740px;
-  display:flex;
-  align-items:center;
-  padding:150px 0 100px;
-  position:relative;
-  overflow:hidden;
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  width:700px;
-  height:700px;
-  right:-200px;
-  top:40px;
-  background:radial-gradient(circle,#276cff30,transparent 68%);
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  width:500px;
-  height:500px;
-  left:-250px;
-  bottom:-200px;
-  background:radial-gradient(circle,#8545ff22,transparent 70%);
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-}
-
-.hero h1{
-  font-family:Orbitron,sans-serif;
-  font-size:clamp(43px,7vw,82px);
-  line-height:1.14;
-  letter-spacing:-2px;
-}
-
-.hero p{
-  max-width:600px;
-  color:var(--muted);
-  font-size:15px;
-  line-height:1.9;
-  margin:25px 0 35px;
-}
-
-.hero-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-/* GENERAL SECTION */
-
-section{
-  padding:100px 0;
-  scroll-margin-top:75px;
-}
-
-.section-heading{
-  text-align:center;
-  margin-bottom:48px;
-}
-
-.section-heading h2{
-  font-family:Orbitron,sans-serif;
-  font-size:clamp(25px,4vw,38px);
-  margin-bottom:15px;
-}
-
-.section-heading p{
-  max-width:650px;
-  margin:auto;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.9;
-}
-
-/* STATS */
-
-.stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:-15px;
-  position:relative;
-  z-index:3;
-}
-
-.stat{
-  text-align:center;
-  padding:28px 15px;
-  border:1px solid var(--border);
-  border-radius:14px;
-  background:linear-gradient(145deg,#111a30,#0b0e1b);
-}
-
-.stat strong{
-  display:block;
-  color:#76baff;
-  font-family:Orbitron,sans-serif;
-  font-size:28px;
-  margin-bottom:10px;
-}
-
-.stat span{
-  color:var(--muted);
-  font-size:10px;
-  letter-spacing:1px;
-}
-
-/* STORE */
-
-.store-tools{
-  display:flex;
-  gap:12px;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:28px;
-  flex-wrap:wrap;
-}
-
-.search-box{
-  flex:1;
-  min-width:220px;
-  padding:14px 16px;
-  background:#101629;
-  color:white;
-  border:1px solid var(--border);
-  border-radius:8px;
-  outline:none;
-}
-
-.search-box:focus{
-  border-color:var(--blue);
-}
-
-.filters{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-}
-
-.filter-btn{
-  padding:11px 14px;
-  color:#bdc6d9;
-  background:#101629;
-  border:1px solid var(--border);
-  border-radius:7px;
-  font-size:11px;
-  cursor:pointer;
-}
-
-.filter-btn.active,
-.filter-btn:hover{
-  background:#1b3c69;
-  color:#fff;
-  border-color:#48aaff88;
-}
-
-.store-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.store-card{
-  overflow:hidden;
-  border:1px solid var(--border);
-  border-radius:15px;
-  background:linear-gradient(145deg,#111a30,#0b0e1b);
-  transition:.3s;
-}
-
-.store-card:hover{
-  transform:translateY(-6px);
-  border-color:#48aaff88;
-  box-shadow:0 15px 40px #0005;
-}
-
-.product-visual{
-  height:175px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:
-    radial-gradient(ellipse at center,#2459a54a,transparent 70%),
-    linear-gradient(145deg,#151d36,#090d19);
-  border-bottom:1px solid var(--border);
-}
-
-.product-visual span{
-  font-family:Orbitron,sans-serif;
-  font-size:38px;
-  font-weight:800;
-  color:#77baff;
-  text-shadow:0 0 30px #398bff88;
-}
-
-.product-info{
-  padding:23px;
-}
-
-.product-code{
-  font-family:Orbitron,sans-serif;
-  font-size:10px;
-  color:#65baff;
-  letter-spacing:2px;
-  margin-bottom:13px;
-}
-
-.product-info h3{
-  font-size:17px;
-  margin-bottom:12px;
-}
-
-.product-info p{
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.8;
-  min-height:65px;
-}
-
-.price{
-  color:#8dc7ff;
-  font-size:13px;
-  font-weight:800;
-  margin:18px 0;
-}
-
-.product-order{
-  display:block;
-  width:100%;
-  text-align:center;
-  padding:13px 10px;
-  border-radius:7px;
-  background:linear-gradient(110deg,#258dff,#7954ed);
-  font-size:11px;
-  font-weight:800;
-  transition:.2s;
-}
-
-.product-order:hover{
-  filter:brightness(1.2);
-}
-
-.empty-message{
-  display:none;
-  color:var(--muted);
-  text-align:center;
-  padding:30px;
-  grid-column:1/-1;
-}
-
-/* FEATURES */
-
-.feature-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.feature-card{
-  padding:30px;
-  border:1px solid var(--border);
-  border-radius:14px;
-  background:linear-gradient(145deg,#111a30,#0b0e1b);
-}
-
-.feature-icon{
-  width:48px;
-  height:48px;
-  display:grid;
-  place-items:center;
-  background:#286bff25;
-  border-radius:12px;
-  color:#79baff;
-  font-size:22px;
-  margin-bottom:22px;
-}
-
-.feature-card h3{
-  font-size:16px;
-  margin-bottom:12px;
-}
-
-.feature-card p{
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.9;
-}
-
-/* ABOUT */
-
-.about-panel{
-  padding:55px 35px;
-  border:1px solid #ffffff18;
-  border-radius:18px;
-  text-align:center;
-  background:radial-gradient(ellipse at 50% 0%,#2859a52b,transparent 65%),#0c1020;
-}
-
-.about-panel p{
-  max-width:760px;
-  margin:20px auto 0;
-  color:var(--muted);
-  font-size:14px;
-  line-height:2;
-}
-
-/* APP */
-
-.app-panel{
-  padding:65px 25px;
-  border:1px solid #5c83ff35;
-  border-radius:20px;
-  text-align:center;
-  background:linear-gradient(120deg,#101a35,#17112d);
-}
-
-.app-panel p{
-  max-width:570px;
-  margin:20px auto 28px;
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.9;
-}
-
-/* CONTACT */
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.contact-card{
-  padding:30px;
-  background:#101629;
-  border:1px solid var(--border);
-  border-radius:14px;
-}
-
-.contact-card h3{
-  margin-bottom:13px;
-  font-size:17px;
-}
-
-.contact-card p{
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.9;
-  margin-bottom:20px;
-}
-
-.contact-number{
-  font-size:19px;
-  color:#8bc9ff;
-  font-weight:800;
-  margin-bottom:20px;
-}
-
-/* FOOTER */
-
-footer{
-  border-top:1px solid var(--border);
-  padding:35px 0;
-  color:#858da3;
-  font-size:11px;
-}
-
-.footer-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.footer-brand{
-  font-family:Orbitron,sans-serif;
-  font-size:16px;
-  font-weight:800;
-  color:white;
-  margin-bottom:9px;
-}
-
-.footer-links{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-}
-
-.footer-links a:hover{
-  color:var(--blue);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:850px){
-  .navlinks{
-    gap:15px;
-    font-size:10px;
-  }
-  .store-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:650px){
-  nav{
-    min-height:70px;
-  }
-
-  .logo{
-    font-size:14px;
-    letter-spacing:1px;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  .navlinks{
-    display:none;
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    padding:25px 5%;
-    flex-direction:column;
-    align-items:flex-start;
-    background:#0b1020;
-    border-bottom:1px solid var(--border);
-    font-size:13px;
-  }
-
-  .navlinks.show{
-    display:flex;
-  }
-
-  .hero{
-    min-height:670px;
-    padding:135px 0 90px;
-  }
-
-  .hero h1{
-    font-size:43px;
-  }
-
-  section{
-    padding:75px 0;
-  }
-
-  .stats{
-    grid-template-columns:1fr;
-  }
-
-  .store-grid,
-  .feature-grid,
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .store-tools{
-    align-items:stretch;
-  }
-
-  .filters{
-    width:100%;
-  }
-
-  .filter-btn{
-    flex:1;
-  }
-
-  .about-panel{
-    padding:40px 22px;
-  }
-
-  .footer-row{
-    align-items:flex-start;
-    flex-direction:column;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070912">
+  <meta name="description" content="DUMAI LIGHTING — Premium RGB Lighting Technology. Experience the Future of Lighting.">
+  <title>DUMAI LIGHTING | Official Website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #070912;
+      --panel: #0d1220;
+      --blue: #36aaff;
+      --purple: #8b5cff;
+      --text: #f4f7ff;
+      --muted: #929bb2;
+      --line: rgba(125, 160, 255, .15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    .glow {
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: .16;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .glow.blue {
+      background: #087cff;
+    }
+
+    .glow.purple {
+      background: #713bff;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 1000;
+      background: rgba(7, 9, 18, .82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .navbar {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--blue);
+      text-shadow: 0 0 18px rgba(54, 170, 255, .65);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 29px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: #aab3c9;
+      transition: .25s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--blue);
+    }
+
+    .nav-contact {
+      padding: 11px 17px;
+      border: 1px solid rgba(54, 170, 255, .5);
+      border-radius: 5px;
+      color: var(--blue) !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: white;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 760px;
+      padding: 170px 0 110px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -3px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(100deg, #39baff, #8a68ff);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .hero-description {
+      max-width: 540px;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 15px;
+      margin: 27px 0 35px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 24px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(100deg, #168fff, #7651ee);
+      box-shadow: 0 0 30px rgba(43, 127, 255, .22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 35px rgba(43, 127, 255, .5);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.2);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .hero-orbit {
+      position: absolute;
+      width: 530px;
+      height: 530px;
+      right: -80px;
+      top: 130px;
+      border: 1px solid rgba(60, 160, 255, .12);
+      border-radius: 50%;
+      box-shadow: 0 0 80px rgba(42, 108, 255, .07),
+                  inset 0 0 80px rgba(42, 108, 255, .06);
+    }
+
+    .hero-orbit::before,
+    .hero-orbit::after {
+      content: "";
+      position: absolute;
+      inset: 45px;
+      border: 1px solid rgba(130, 90, 255, .15);
+      border-radius: 50%;
+    }
+
+    .hero-orbit::after {
+      inset: 100px;
+      border-color: rgba(54, 170, 255, .2);
+    }
+
+    .orbit-core {
+      position: absolute;
+      inset: 185px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #168fff, #8653ff);
+      filter: blur(35px);
+      opacity: .6;
+    }
+
+    /* GENERAL SECTION */
+
+    section {
+      padding: 105px 0;
+      position: relative;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 55px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 15px;
+    }
+
+    .section-heading h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(25px, 4vw, 38px);
+      line-height: 1.35;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 14px;
+      margin-top: 17px;
+    }
+
+    /* STORE */
+
+    #store {
+      background: linear-gradient(180deg, #090d19, #080a13);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .coming-soon {
+      max-width: 760px;
+      min-height: 360px;
+      margin: auto;
+      padding: 65px 25px;
+      text-align: center;
+      border: 1px solid rgba(75, 150, 255, .23);
+      border-radius: 12px;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(43, 118, 255, .13), transparent 65%),
+        rgba(13, 18, 32, .75);
+      box-shadow: 0 20px 70px rgba(0,0,0,.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .coming-icon {
+      width: 76px;
+      height: 76px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 27px;
+      border: 1px solid rgba(54, 170, 255, .45);
+      border-radius: 50%;
+      color: var(--blue);
+      font-size: 30px;
+      box-shadow: 0 0 35px rgba(54, 170, 255, .13);
+    }
+
+    .coming-soon h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(23px, 4vw, 34px);
+      letter-spacing: 3px;
+      background: linear-gradient(90deg, #53c5ff, #a28aff);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .coming-soon p {
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 14px;
+      max-width: 470px;
+      margin: 20px auto 0;
+    }
+
+    .coming-label {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 10px 18px;
+      border: 1px solid rgba(54, 170, 255, .35);
+      border-radius: 3px;
+      color: var(--blue);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    /* FEATURES */
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature-card {
+      padding: 32px 27px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(145deg, rgba(18, 26, 45, .8), rgba(10, 13, 25, .8));
+      transition: .3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(54, 170, 255, .5);
+    }
+
+    .feature-icon {
+      color: var(--blue);
+      font-size: 27px;
+      margin-bottom: 23px;
+    }
+
+    .feature-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    /* ABOUT */
+
+    #about {
+      background: #090d18;
+    }
+
+    .about-content {
+      max-width: 780px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(26px, 4vw, 39px);
+      line-height: 1.4;
+    }
+
+    .about-content h2 span {
+      color: var(--blue);
+    }
+
+    .about-content p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 2;
+      margin-top: 23px;
+    }
+
+    /* APPLICATION */
+
+    .app-panel {
+      max-width: 850px;
+      margin: auto;
+      padding: 55px 30px;
+      text-align: center;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(91, 71, 255, .13), transparent 65%), var(--panel);
+    }
+
+    .app-panel h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+    .app-panel p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 520px;
+      margin: auto;
+    }
+
+    .app-status {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 18px;
+      border: 1px solid rgba(139, 92, 255, .5);
+      color: #b69aff;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    /* CONTACT */
+
+    #contact {
+      background: linear-gradient(180deg, #090d18, #070912);
+    }
+
+    .contact-panel {
+      text-align: center;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .contact-panel h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(25px, 4vw, 38px);
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+      margin: 20px auto 28px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0;
+      background: #060810;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .footer-brand span {
+      color: var(--blue);
+    }
+
+    footer p {
+      color: #727d96;
+      font-size: 11px;
+    }
+
+    .footer-tagline {
+      color: #929bb2;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 17px;
+      }
+
+      .nav-links a {
+        font-size: 9px;
+      }
+
+      .hero-orbit {
+        right: -270px;
+        opacity: .6;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .navbar {
+        height: 68px;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 25px 5%;
+        background: rgba(7, 9, 18, .98);
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 22px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+        display: block;
+      }
+
+      .nav-contact {
+        text-align: center;
+      }
+
+      .hero {
+        min-height: 680px;
+        padding: 145px 0 90px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-orbit {
+        width: 370px;
+        height: 370px;
+        top: 230px;
+        right: -260px;
+      }
+
+      .orbit-core {
+        inset: 125px;
+      }
+
+      section {
+        padding: 78px 0;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .coming-soon {
+        min-height: 330px;
+        padding: 48px 20px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
-<header>
-<div class="container">
-<nav>
-
-<a class="logo" href="#home">DUMAI <span>LIGHTING</span></a>
-
-<button class="menu-btn" aria-label="Buka menu"
-onclick="document.querySelector('.navlinks').classList.toggle('show')">
-☰
-</button>
-
-<div class="navlinks">
-<a href="#home">HOME</a>
-<a href="#store">STORE</a>
-<a href="#features">FEATURES</a>
-<a href="#about">ABOUT</a>
-<a href="#app">APPLICATION</a>
-<a href="#contact">CONTACT</a>
-</div>
-
-</nav>
-</div>
-</header>
-
-<main>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-<div class="container hero-content">
-
-<div class="tag">INNOVATION IN RGB LIGHTING</div>
-
-<h1>
-CONTROL<br>
-YOUR <span class="gradient">LIGHT.</span>
-</h1>
-
-<p>
-Discover a new experience in RGB lighting technology.
-Designed to bring intelligent control, dynamic effects,
-and futuristic style into every lighting project.
-</p>
-
-<div class="hero-buttons">
-<a href="#store" class="btn">EXPLORE OUR STORE ↗</a>
-<a href="#about" class="btn btn-outline">DISCOVER MORE</a>
-</div>
-
-</div>
-</section>
-
-<!-- STATS -->
-
-<div class="container">
-<div class="stats">
-
-<div class="stat">
-<strong>60+</strong>
-<span>DYNAMIC RGB EFFECTS</span>
-</div>
-
-<div class="stat">
-<strong>DUAL</strong>
-<span>MATRIX TECHNOLOGY</span>
-</div>
-
-<div class="stat">
-<strong>SMART</strong>
-<span>WIRELESS CONTROL</span>
-</div>
-
-</div>
-</div>
-
-<!-- STORE -->
-
-<section id="store">
-<div class="container">
-
-<div class="section-heading">
-<div class="tag">OFFICIAL PRODUCT COLLECTION</div>
-<h2>OUR <span class="gradient">STORE</span></h2>
-<p>
-Explore the DUMAI LIGHTING product collection.
-Contact our official team for product availability,
-specifications, and pricing.
-</p>
-</div>
-
-<div class="store-tools">
-
-<input
-type="search"
-id="productSearch"
-class="search-box"
-placeholder="Search products..."
-aria-label="Cari produk"
-oninput="filterProducts()">
-
-<div class="filters">
-<button class="filter-btn active" onclick="setFilter('all',this)">ALL</button>
-<button class="filter-btn" onclick="setFilter('matrix',this)">MATRIX</button>
-<button class="filter-btn" onclick="setFilter('automotive',this)">AUTOMOTIVE</button>
-<button class="filter-btn" onclick="setFilter('controller',this)">CONTROLLER</button>
-<button class="filter-btn" onclick="setFilter('accessories',this)">ACCESSORIES</button>
-</div>
-
-</div>
-
-<div class="store-grid" id="productGrid">
-
-<!-- PRODUCT 01 -->
-<!-- Untuk menambah produk, duplikat satu blok product-card
-     dan ubah nama, kode, deskripsi, kategori, serta pesannya. -->
-
-<article class="store-card product-card" data-category="matrix" data-name="RGB Matrix">
-
-<div class="product-visual">
-<span>RGB</span>
-</div>
-
-<div class="product-info">
-<div class="product-code">PRODUCT 001</div>
-<h3>RGB MATRIX</h3>
-<p>
-Dynamic RGB matrix lighting with synchronized effects
-and smart wireless control technology.
-</p>
-<div class="price">HUBUNGI KAMI</div>
-
-<a class="product-order"
-target="_blank"
-rel="noopener"
-href="https://wa.me/6285374130999?text=Halo%20DUMAI%20LIGHTING%2C%20saya%20ingin%20bertanya%20tentang%20produk%20RGB%20MATRIX.">
-TANYA HARGA & PESAN ↗
-</a>
-</div>
-</article>
-
-<!-- PRODUCT 02 -->
-
-<article class="store-card product-card" data-category="automotive" data-name="Automotive Lighting">
-
-<div class="product-visual">
-<span>DL</span>
-</div>
-
-<div class="product-info">
-<div class="product-code">PRODUCT 002</div>
-<h3>AUTOMOTIVE LIGHTING</h3>
-<p>
-Creative automotive lighting solutions designed
-to give your vehicle a distinctive appearance.
-</p>
-<div class="price">HUBUNGI KAMI</div>
-
-<a class="product-order"
-target="_blank"
-rel="noopener"
-href="https://wa.me/6285374130999?text=Halo%20DUMAI%20LIGHTING%2C%20saya%20ingin%20bertanya%20tentang%20AUTOMOTIVE%20LIGHTING.">
-TANYA HARGA & PESAN ↗
-</a>
-</div>
-</article>
-
-<!-- PRODUCT 03 -->
-
-<article class="store-card product-card" data-category="controller" data-name="Smart LED Controller">
-
-<div class="product-visual">
-<span>CTRL</span>
-</div>
-
-<div class="product-info">
-<div class="product-code">PRODUCT 003</div>
-<h3>SMART LED CONTROLLER</h3>
-<p>
-Intelligent wireless control technology
-for customized LED lighting systems.
-</p>
-<div class="price">HUBUNGI KAMI</div>
-
-<a class="product-order"
-target="_blank"
-rel="noopener"
-href="https://wa.me/6285374130999?text=Halo%20DUMAI%20LIGHTING%2C%20saya%20ingin%20bertanya%20tentang%20SMART%20LED%20CONTROLLER.">
-TANYA HARGA & PESAN ↗
-</a>
-</div>
-</article>
-
-<!-- PRODUCT 04 -->
-
-<article class="store-card product-card" data-category="accessories" data-name="Lighting Accessories">
-
-<div class="product-visual">
-<span>LED</span>
-</div>
-
-<div class="product-info">
-<div class="product-code">PRODUCT 004</div>
-<h3>LIGHTING ACCESSORIES</h3>
-<p>
-Supporting components and accessories
-for customized lighting projects.
-</p>
-<div class="price">HUBUNGI KAMI</div>
-
-<a class="product-order"
-target="_blank"
-rel="noopener"
-href="https://wa.me/6285374130999?text=Halo%20DUMAI%20LIGHTING%2C%20saya%20ingin%20bertanya%20tentang%20LIGHTING%20ACCESSORIES.">
-TANYA HARGA & PESAN ↗
-</a>
-</div>
-</article>
-
-<div class="empty-message" id="emptyMessage">
-No products found.
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- FEATURES -->
-
-<section id="features">
-<div class="container">
-
-<div class="section-heading">
-<div class="tag">OUR TECHNOLOGY</div>
-<h2>BUILT FOR <span class="gradient">EXCELLENCE</span></h2>
-<p>
-Powerful features. Intelligent control.
-A distinctive lighting experience.
-</p>
-</div>
-
-<div class="feature-grid">
-
-<div class="feature-card">
-<div class="feature-icon">✦</div>
-<h3>60 RGB Effects</h3>
-<p>
-Explore a wide range of dynamic lighting animations
-and colorful visual experiences.
-</p>
-</div>
-
-<div class="feature-card">
-<div class="feature-icon">⌁</div>
-<h3>Smart Control</h3>
-<p>
-Control your compatible lighting system
-wirelessly from your Android smartphone.
-</p>
-</div>
-
-<div class="feature-card">
-<div class="feature-icon">▦</div>
-<h3>Dual Matrix</h3>
-<p>
-Designed for synchronized lighting
-across two LED matrix panels.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-<div class="container">
-
-<div class="about-panel">
-
-<div class="tag">WHO WE ARE</div>
-
-<h2 class="section-heading" style="margin-bottom:0">
-ABOUT <span class="gradient">DUMAI LIGHTING</span>
-</h2>
-
-<p>
-DUMAI LIGHTING is a technology brand focused on
-developing smart RGB lighting products, creative
-LED systems, and intuitive wireless control experiences.
-
-Our mission is to make lighting more expressive,
-accessible, and innovative through technology
-and thoughtful product development.
-</p>
-
-</div>
-</div>
-</section>
-
-<!-- APPLICATION -->
-
-<section id="app">
-<div class="container">
-
-<div class="app-panel">
-
-<div class="tag">OFFICIAL ANDROID APPLICATION</div>
-
-<h2 class="section-heading" style="margin-bottom:0">
-YOUR LIGHT.<br>
-<span class="gradient">YOUR CONTROL.</span>
-</h2>
-
-<p>
-Experience DUMAI LIGHTING through our Android application.
-Connect, customize, and control your compatible RGB Matrix
-system with ease.
-</p>
-
-<span class="btn btn-outline">APPLICATION COMING SOON</span>
-
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-<div class="container">
-
-<div class="section-heading">
-<div class="tag">GET IN TOUCH</div>
-<h2>CONTACT <span class="gradient">OUR TEAM</span></h2>
-<p>
-Interested in our products or need more information?
-Contact the official DUMAI LIGHTING team.
-</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-<h3>Official WhatsApp</h3>
-<p>
-For product inquiries, pricing, availability,
-and orders, contact our official WhatsApp.
-</p>
-
-<div class="contact-number">+62 853-7413-0999</div>
-
-<a class="btn btn-green"
-target="_blank"
-rel="noopener"
-href="https://wa.me/6285374130999?text=Halo%20DUMAI%20LIGHTING%2C%20saya%20ingin%20bertanya%20tentang%20produk%20Anda.">
-CHAT VIA WHATSAPP ↗
-</a>
-</div>
-
-<div class="contact-card">
-<h3>Customer Support</h3>
-<p>
-Our team is ready to help you learn more about
-DUMAI LIGHTING products and services.
-</p>
-
-<a href="https://wa.me/6285374130999"
-target="_blank"
-rel="noopener"
-class="btn btn-outline">
-CONTACT SUPPORT ↗
-</a>
-</div>
-
-</div>
-</div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-
-<footer>
-<div class="container footer-row">
-
-<div>
-<div class="footer-brand">DUMAI LIGHTING</div>
-<div>Innovation in RGB Lighting Technology.</div>
-</div>
-
-<div class="footer-links">
-<a href="#home">Home</a>
-<a href="#store">Store</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</div>
-
-<div>
-© 2026 DUMAI LIGHTING. All rights reserved.
-</div>
-
-</div>
-</footer>
-
-<script>
-
-/* MOBILE MENU */
-
-document.querySelectorAll(".navlinks a").forEach(link=>{
-  link.addEventListener("click",()=>{
-    document.querySelector(".navlinks").classList.remove("show");
-  });
-});
-
-/* PRODUCT FILTER AND SEARCH */
-
-let currentFilter = "all";
-
-function setFilter(category,button){
-
-  currentFilter = category;
-
-  document.querySelectorAll(".filter-btn").forEach(btn=>{
-    btn.classList.remove("active");
-  });
-
-  button.classList.add("active");
-
-  filterProducts();
-}
-
-function filterProducts(){
-
-  const search = document
-    .getElementById("productSearch")
-    .value.toLowerCase();
-
-  const products = document.querySelectorAll(".product-card");
-
-  let visible = 0;
-
-  products.forEach(product=>{
-
-    const category = product.dataset.category;
-    const name = product.dataset.name.toLowerCase();
-    const text = product.innerText.toLowerCase();
-
-    const categoryMatch =
-      currentFilter === "all" ||
-      category === currentFilter;
-
-    const searchMatch =
-      name.includes(search) ||
-      text.includes(search);
-
-    if(categoryMatch && searchMatch){
-      product.style.display = "";
-      visible++;
-    }else{
-      product.style.display = "none";
-    }
-
-  });
-
-  document.getElementById("emptyMessage").style.display =
-    visible === 0 ? "block" : "none";
-}
-
-</script>
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="logo">DUMAI <span>LIGHTING</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#store">STORE</a></li>
+        <li><a href="#features">FEATURES</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#application">APPLICATION</a></li>
+        <li><a href="#contact" class="nav-contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+
+    <section class="hero" id="home">
+      <div class="glow blue" style="top:100px;left:-150px"></div>
+      <div class="glow purple" style="bottom:0;right:100px"></div>
+      <div class="hero-orbit">
+        <div class="orbit-core"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">NEXT GENERATION LIGHTING TECHNOLOGY</div>
+
+          <h1>
+            CONTROL<br>
+            YOUR <span>LIGHT.</span>
+          </h1>
+
+          <p class="hero-description">
+            Discover a new experience in RGB lighting technology.
+            Designed with innovation, precision, and a futuristic vision
+            by DUMAI LIGHTING.
+          </p>
+
+          <div class="button-group">
+            <a href="#store" class="btn btn-primary">EXPLORE STORE</a>
+            <a href="#about" class="btn btn-outline">DISCOVER MORE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORE -->
+
+    <section id="store">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">OFFICIAL STORE</div>
+          <h2>OUR COLLECTION</h2>
+          <p>
+            Explore the world of DUMAI LIGHTING.
+            Our official product collection is being prepared.
+          </p>
+        </div>
+
+        <div class="coming-soon">
+          <div class="coming-icon">✦</div>
+          <h3>COMING SOON</h3>
+          <p>
+            Our products are being prepared.
+            Stay connected and be the first to discover
+            the next generation of lighting technology.
+          </p>
+          <div class="coming-label">PRODUCT COLLECTION — IN PREPARATION</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+
+    <section id="features">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">OUR TECHNOLOGY</div>
+          <h2>BUILT FOR THE FUTURE</h2>
+          <p>
+            Innovation meets modern design.
+            Discover the principles behind DUMAI LIGHTING.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">✧</div>
+            <h3>RGB EXPERIENCE</h3>
+            <p>
+              A colorful lighting experience designed
+              to bring your environment to life.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">⌘</div>
+            <h3>SMART CONTROL</h3>
+            <p>
+              Modern control concepts designed to make
+              lighting interaction more convenient.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">◈</div>
+            <h3>MODERN DESIGN</h3>
+            <p>
+              A futuristic design approach combining
+              technology, creativity, and aesthetics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section id="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="eyebrow">ABOUT DUMAI LIGHTING</div>
+          <h2>
+            MORE THAN LIGHT.<br>
+            <span>IT'S AN EXPERIENCE.</span>
+          </h2>
+
+          <p>
+            DUMAI LIGHTING is a lighting technology brand focused
+            on developing modern RGB lighting solutions and smart
+            lighting experiences. We believe technology should
+            be functional, creative, and beautifully designed.
+            <br><br>
+            Our vision is to bring a new perspective to the world
+            of lighting through innovation and continuous development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLICATION -->
+
+    <section id="application">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">DUMAI LIGHTING APP</div>
+          <h2>CONTROL IN YOUR HANDS</h2>
+          <p>
+            A dedicated application experience for DUMAI LIGHTING products.
+          </p>
+        </div>
+
+        <div class="app-panel">
+          <h3>SMART LIGHTING CONTROL</h3>
+          <p>
+            The DUMAI LIGHTING application is being prepared
+            for its next development stage. More information
+            will be announced soon.
+          </p>
+          <div class="app-status">APPLICATION — COMING SOON</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div class="eyebrow">GET IN TOUCH</div>
+          <h2>LET'S CONNECT.</h2>
+          <p>
+            Have questions or want to know more about DUMAI LIGHTING?
+            Contact our official team through WhatsApp.
+          </p>
+
+          <a
+            href="https://wa.me/6285374130999?text=Halo%20DUMAI%20LIGHTING%2C%20saya%20ingin%20mengetahui%20informasi%20lebih%20lanjut."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary">
+            CONTACT VIA WHATSAPP
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">DUMAI <span>LIGHTING</span></div>
+      <p>© <span id="year"></span> DUMAI LIGHTING. ALL RIGHTS RESERVED.</p>
+      <div class="footer-tagline">EXPERIENCE THE FUTURE OF LIGHTING.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("show");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close mobile menu after selecting a section
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        navLinks.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Automatic copyright year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
