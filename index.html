@@ -1,414 +1,159 @@
 
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080b14">
+<meta name="theme-color" content="#070914">
+<meta name="description" content="DUMAI LIGHTING - Premium RGB Matrix Lighting Technology.">
 <title>DUMAI LIGHTING | Official Website</title>
-<meta name="description" content="DUMAI LIGHTING - Smart RGB Matrix Control System. Control your light, define your style.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
-
-:root {
-  --bg:#080b14;
-  --panel:#101626;
-  --blue:#42a5ff;
-  --purple:#a66cff;
-  --white:#f4f7ff;
-  --muted:#9ba9c1;
-}
-
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body {
-  background:var(--bg);
-  color:var(--white);
-  font-family:Inter, sans-serif;
-  overflow-x:hidden;
-}
-body::before {
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:-1;
-  background:
-    radial-gradient(ellipse at 15% 20%, #153b7140, transparent 40%),
-    radial-gradient(ellipse at 85% 50%, #7028a52b, transparent 40%);
-}
-a { color:inherit; text-decoration:none; }
-
-header {
-  height:82px;
-  padding:0 8%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  border-bottom:1px solid #ffffff12;
-  background:#080b14dd;
-  backdrop-filter:blur(18px);
-  position:sticky;
-  top:0;
-  z-index:10;
-}
-.logo {
-  font-family:Orbitron,sans-serif;
-  font-weight:800;
-  letter-spacing:2px;
-  font-size:19px;
-}
-.logo span { color:var(--blue); }
-nav { display:flex; gap:34px; }
-nav a {
-  font-size:12px;
-  color:#c1cce0;
-  letter-spacing:1px;
-  transition:.3s;
-}
-nav a:hover { color:var(--blue); }
-.nav-button {
-  border:1px solid #42a5ff80;
-  padding:11px 19px;
-  border-radius:5px;
-  font-size:11px;
-  letter-spacing:1px;
-  color:#8dcaff;
-}
-.menu { display:none; background:none; border:0; color:white; font-size:25px; }
-
-.hero {
-  min-height:680px;
-  padding:100px 8% 90px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-}
-.eyebrow {
-  color:#75baff;
-  font-size:11px;
-  letter-spacing:5px;
-  margin-bottom:26px;
-}
-.hero h1 {
-  font-family:Orbitron,sans-serif;
-  font-size:clamp(37px,7vw,78px);
-  line-height:1.15;
-  letter-spacing:3px;
-}
-.hero h1 span {
-  background:linear-gradient(90deg,#56baff,#b48aff);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-.hero p {
-  color:var(--muted);
-  font-size:15px;
-  line-height:1.9;
-  max-width:570px;
-  margin:25px auto 35px;
-}
-.actions {
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
-}
-.btn {
-  padding:15px 25px;
-  border-radius:5px;
-  font-size:11px;
-  letter-spacing:1.5px;
-  font-weight:700;
-  transition:.3s;
-}
-.btn-primary {
-  background:linear-gradient(100deg,#278ce8,#7850d7);
-  box-shadow:0 0 30px #438dfb30;
-}
-.btn-outline { border:1px solid #ffffff35; }
-.btn:hover { transform:translateY(-3px); filter:brightness(1.2); }
-
-.hero-visual {
-  width:min(850px,100%);
-  margin-top:75px;
-  border:1px solid #6a9de94a;
-  border-radius:14px;
-  padding:12px;
-  background:linear-gradient(135deg,#16243b,#111322);
-  box-shadow:0 0 65px #317bd52b;
-}
-.hero-visual img {
-  display:block;
-  width:100%;
-  height:290px;
-  object-fit:cover;
-  border-radius:8px;
-}
-
-section { padding:100px 8%; }
-.section-label {
-  color:var(--blue);
-  font-size:10px;
-  letter-spacing:4px;
-  margin-bottom:16px;
-}
-.section-title {
-  font-family:Orbitron,sans-serif;
-  font-size:clamp(25px,4vw,39px);
-  margin-bottom:18px;
-}
-.section-desc {
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.9;
-  max-width:620px;
-}
-
-.features {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  margin-top:45px;
-}
-.feature {
-  background:linear-gradient(145deg,#141e31,#0d1220);
-  border:1px solid #ffffff13;
-  border-radius:10px;
-  padding:30px 25px;
-  transition:.3s;
-}
-.feature:hover {
-  border-color:#54a9ff88;
-  transform:translateY(-5px);
-}
-.feature .number {
-  font-family:Orbitron,sans-serif;
-  font-size:27px;
-  color:#69baff;
-  margin-bottom:25px;
-}
-.feature h3 { font-size:16px; margin-bottom:12px; }
-.feature p { color:var(--muted); font-size:12px; line-height:1.8; }
-
-.app-section {
-  background:linear-gradient(120deg,#101a2d,#15102a);
-  border-top:1px solid #ffffff12;
-  border-bottom:1px solid #ffffff12;
-  text-align:center;
-}
-.app-section .section-desc { margin:0 auto; }
-.app-panel {
-  max-width:700px;
-  margin:45px auto 0;
-  padding:38px;
-  border:1px solid #7a9edc45;
-  border-radius:12px;
-  background:#080d19a8;
-}
-.app-icon {
-  width:75px;
-  height:75px;
-  margin:0 auto 22px;
-  border-radius:20px;
-  display:grid;
-  place-items:center;
-  font-size:35px;
-  background:linear-gradient(135deg,#267fce,#7448ba);
-  box-shadow:0 0 35px #448bff45;
-}
-.app-panel h3 {
-  font-family:Orbitron,sans-serif;
-  font-size:21px;
-  letter-spacing:2px;
-}
-.app-panel p {
-  color:var(--muted);
-  font-size:13px;
-  margin:15px 0 25px;
-  line-height:1.8;
-}
-.coming {
-  display:inline-block;
-  border:1px solid #a66cff80;
-  color:#c5a4ff;
-  border-radius:30px;
-  padding:10px 20px;
-  font-size:10px;
-  letter-spacing:2px;
-}
-
-.about {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:60px;
-}
-.about-visual {
-  min-height:300px;
-  border-radius:12px;
-  border:1px solid #4a8edb55;
-  background:
-    radial-gradient(circle at 50% 50%,#304d8a70,transparent 55%),
-    linear-gradient(135deg,#111b30,#171026);
-  display:grid;
-  place-items:center;
-  text-align:center;
-  padding:30px;
-}
-.about-visual strong {
-  font-family:Orbitron,sans-serif;
-  font-size:clamp(25px,4vw,42px);
-  letter-spacing:3px;
-  background:linear-gradient(90deg,#60baff,#b78cff);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-footer {
-  border-top:1px solid #ffffff15;
-  padding:35px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  color:#8290a8;
-  font-size:11px;
-}
-footer strong { color:white; letter-spacing:2px; }
-
-@media(max-width:750px) {
-  header { padding:0 6%; height:70px; }
-  nav {
-    display:none;
-    position:absolute;
-    top:70px;
-    left:0;
-    right:0;
-    background:#0b1020;
-    padding:25px;
-    flex-direction:column;
-    gap:22px;
-    border-bottom:1px solid #ffffff20;
-  }
-  nav.open { display:flex; }
-  .nav-button { display:none; }
-  .menu { display:block; }
-  .hero { padding:85px 6% 65px; min-height:auto; }
-  .hero-visual img { height:190px; }
-  section { padding:75px 6%; }
-  .features { grid-template-columns:1fr; }
-  .about { grid-template-columns:1fr; gap:30px; }
-  footer { flex-direction:column; text-align:center; }
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+:root{--blue:#48aaff;--purple:#9565ff;--bg:#070914;--muted:#a1a9bd}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,90%);margin:auto}
+header{position:fixed;top:0;width:100%;z-index:10;background:#070914d9;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Orbitron,sans-serif;font-size:19px;font-weight:800;letter-spacing:2px}
+.logo span{color:var(--blue)}
+.navlinks{display:flex;gap:30px;color:#c4c8d6;font-size:13px}
+.navlinks a:hover{color:var(--blue)}
+.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{min-height:760px;padding:170px 0 100px;display:flex;align-items:center;position:relative;overflow:hidden}
+.glow{position:absolute;width:600px;height:600px;right:-150px;top:100px;background:radial-gradient(circle,#276cff32,transparent 68%);pointer-events:none}
+.glow2{position:absolute;width:500px;height:500px;left:-250px;bottom:-180px;background:radial-gradient(circle,#8545ff22,transparent 70%);pointer-events:none}
+.tag{display:inline-block;border:1px solid #48aaff55;color:#83c5ff;padding:9px 15px;border-radius:30px;font-size:11px;letter-spacing:2px;margin-bottom:28px}
+h1{font-family:Orbitron,sans-serif;font-size:clamp(40px,7vw,78px);line-height:1.15;letter-spacing:-2px;max-width:850px}
+.gradient{background:linear-gradient(100deg,#69c7ff,#a58aff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.hero p{color:var(--muted);line-height:1.9;max-width:560px;margin:25px 0 35px;font-size:15px}
+.btn{display:inline-block;padding:15px 24px;border-radius:8px;background:linear-gradient(110deg,#258dff,#7954ed);font-size:13px;font-weight:700;box-shadow:0 8px 35px #387bff35;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 40px #387bff60}
+.btn-outline{border:1px solid #ffffff35;background:transparent;box-shadow:none;margin-left:10px}
+section{padding:100px 0}
+.section-title{text-align:center;font-family:Orbitron,sans-serif;font-size:clamp(25px,4vw,38px);margin-bottom:15px}
+.section-desc{text-align:center;color:var(--muted);font-size:14px;line-height:1.8;max-width:600px;margin:0 auto 50px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:-20px;position:relative}
+.stat,.card{background:linear-gradient(145deg,#11172a,#0b0e1b);border:1px solid #ffffff12;border-radius:15px;padding:28px}
+.stat{text-align:center}
+.stat strong{font-family:Orbitron;color:#76baff;font-size:30px}
+.stat p{color:var(--muted);font-size:12px;margin-top:10px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#458fff77}
+.card-icon{width:48px;height:48px;border-radius:12px;background:#286bff20;color:#79baff;display:grid;place-items:center;font-size:23px;margin-bottom:23px}
+.card h3{font-size:17px;margin-bottom:12px}
+.card p{font-size:13px;color:var(--muted);line-height:1.8}
+.product-panel{border:1px solid #ffffff15;border-radius:20px;padding:55px 35px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#2859a52b,transparent 65%),#0c1020}
+.product-panel h3{font-family:Orbitron;font-size:25px;margin-bottom:18px}
+.product-panel p{color:var(--muted);line-height:1.9;font-size:14px;max-width:650px;margin:auto auto 28px}
+.download{background:linear-gradient(120deg,#101a35,#17112d);border:1px solid #5c83ff35;border-radius:20px;text-align:center;padding:65px 25px}
+.download p{color:var(--muted);margin:18px auto 28px;max-width:550px;line-height:1.8;font-size:14px}
+footer{border-top:1px solid #ffffff12;padding:35px 0;color:#858da3;font-size:12px}
+.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:700px){
+.navlinks{display:none;position:absolute;top:76px;left:0;width:100%;background:#0b1020;padding:25px;flex-direction:column;gap:22px}
+.navlinks.show{display:flex}
+.menu{display:block}
+.hero{min-height:680px;padding-top:145px}
+.stats,.cards{grid-template-columns:1fr}
+.btn{margin-bottom:10px}
+.btn-outline{margin-left:0}
+section{padding:75px 0}
 }
 </style>
 </head>
 
 <body>
-
 <header>
-  <a class="logo" href="#">DUMAI <span>LIGHTING</span></a>
-  <nav id="navigation">
-    <a href="#home">HOME</a>
-    <a href="#features">FEATURES</a>
-    <a href="#application">APPLICATION</a>
-    <a href="#about">ABOUT</a>
-  </nav>
-  <a class="nav-button" href="#application">GET STARTED</a>
-  <button class="menu" onclick="document.getElementById('navigation').classList.toggle('open')">☰</button>
+<div class="container">
+<nav>
+<a class="logo" href="#home">DL<span>.</span> LIGHTING</a>
+<button class="menu" onclick="document.querySelector('.navlinks').classList.toggle('show')">☰</button>
+<div class="navlinks">
+<a href="#home">HOME</a>
+<a href="#products">PRODUCTS</a>
+<a href="#features">FEATURES</a>
+<a href="#about">ABOUT</a>
+<a href="#download">DOWNLOAD</a>
+</div>
+</nav>
+</div>
 </header>
 
 <main>
-<section class="hero" id="home">
-  <div class="eyebrow">WELCOME TO THE OFFICIAL WEBSITE</div>
-  <h1>CONTROL YOUR<br><span>LIGHT.</span></h1>
-  <p>
-    Experience a new level of RGB lighting control.
-    Intelligent technology, limitless colors, and a style
-    that defines your identity.
-  </p>
-  <div class="actions">
-    <a class="btn btn-primary" href="#application">EXPLORE APPLICATION</a>
-    <a class="btn btn-outline" href="#features">DISCOVER MORE</a>
-  </div>
-  <div class="hero-visual">
-    <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1400&q=85"
-         alt="Atmospheric futuristic lighting">
-  </div>
+<div class="hero" id="home">
+<div class="glow"></div><div class="glow2"></div>
+<div class="container">
+<div class="tag">INNOVATION IN RGB LIGHTING</div>
+<h1>CONTROL<br>YOUR <span class="gradient">LIGHT.</span></h1>
+<p>Discover a new experience in RGB lighting technology. Designed to bring intelligent control, dynamic effects, and futuristic style into every lighting project.</p>
+<a href="#products" class="btn">EXPLORE PRODUCTS ↗</a>
+<a href="#about" class="btn btn-outline">DISCOVER MORE</a>
+</div>
+</div>
+
+<div class="container">
+<div class="stats">
+<div class="stat"><strong>60+</strong><p>DYNAMIC RGB EFFECTS</p></div>
+<div class="stat"><strong>DUAL</strong><p>MATRIX TECHNOLOGY</p></div>
+<div class="stat"><strong>SMART</strong><p>WIRELESS CONTROL</p></div>
+</div>
+</div>
+
+<section id="products">
+<div class="container">
+<h2 class="section-title">OUR <span class="gradient">PRODUCTS</span></h2>
+<p class="section-desc">Technology built to transform ordinary lighting into extraordinary experiences.</p>
+<div class="product-panel">
+<div class="tag">DUMAI LIGHTING SIGNATURE</div>
+<h3>RGB MATRIX SYSTEM</h3>
+<p>A smart LED matrix system powered by Wemos technology, featuring synchronized lighting effects, wireless control, adjustable brightness, and dynamic RGB animation.</p>
+<a href="#download" class="btn">DISCOVER THE APP ↗</a>
+</div>
+</div>
 </section>
 
 <section id="features">
-  <div class="section-label">OUR TECHNOLOGY</div>
-  <h2 class="section-title">BUILT FOR YOUR LIGHT.</h2>
-  <p class="section-desc">
-    A smarter way to control your DUMAI LIGHTING RGB Matrix.
-    Designed to deliver a smooth and customizable experience.
-  </p>
-
-  <div class="features">
-    <div class="feature">
-      <div class="number">01</div>
-      <h3>60 RGB EFFECTS</h3>
-      <p>Explore dozens of lighting effects and discover your favorite visual atmosphere.</p>
-    </div>
-    <div class="feature">
-      <div class="number">02</div>
-      <h3>SMART CONTROL</h3>
-      <p>Manage brightness, animation speed, and power directly from your Android device.</p>
-    </div>
-    <div class="feature">
-      <div class="number">03</div>
-      <h3>DUAL MATRIX</h3>
-      <p>Designed to control a synchronized dual-panel DUMAI LIGHTING RGB Matrix system.</p>
-    </div>
-  </div>
+<div class="container">
+<h2 class="section-title">BUILT FOR <span class="gradient">EXCELLENCE</span></h2>
+<p class="section-desc">Powerful features. Simple control. A distinctive lighting experience.</p>
+<div class="cards">
+<div class="card"><div class="card-icon">✦</div><h3>60 RGB Effects</h3><p>Explore a wide range of dynamic lighting animations and colorful visual experiences.</p></div>
+<div class="card"><div class="card-icon">⌁</div><h3>Smart Control</h3><p>Control your lighting wirelessly from your Android smartphone.</p></div>
+<div class="card"><div class="card-icon">▦</div><h3>Dual Matrix</h3><p>Designed for synchronized lighting across two LED matrix panels.</p></div>
+</div>
+</div>
 </section>
 
-<section class="app-section" id="application">
-  <div class="section-label">OFFICIAL ANDROID APP</div>
-  <h2 class="section-title">YOUR LIGHT. YOUR CONTROL.</h2>
-  <p class="section-desc">
-    Meet the official DUMAI LIGHTING application.
-    Take control of your RGB Matrix from your smartphone.
-  </p>
-
-  <div class="app-panel">
-    <div class="app-icon">⚡</div>
-    <h3>DUMAI LIGHTING</h3>
-    <p>
-      Android application for DUMAI LIGHTING RGB Matrix.
-      The official download will be available here soon.
-    </p>
-    <span class="coming">COMING SOON</span>
-  </div>
+<section id="about">
+<div class="container">
+<h2 class="section-title">ABOUT <span class="gradient">DUMAI LIGHTING</span></h2>
+<p class="section-desc">DUMAI LIGHTING is a technology brand focused on developing smart RGB lighting products, creative LED systems, and intuitive wireless control experiences. Our mission is to make lighting more expressive, accessible, and innovative.</p>
+</div>
 </section>
 
-<section class="about" id="about">
-  <div>
-    <div class="section-label">ABOUT THE BRAND</div>
-    <h2 class="section-title">BEYOND<br>ILLUMINATION.</h2>
-    <p class="section-desc">
-      DUMAI LIGHTING is a technology-focused lighting brand
-      dedicated to creating smart RGB lighting experiences.
-      Our vision is to combine innovation, control, and design
-      into one unique experience.
-    </p>
-  </div>
-  <div class="about-visual">
-    <strong>DUMAI<br>LIGHTING</strong>
-  </div>
+<section id="download">
+<div class="container">
+<div class="download">
+<div class="tag">OFFICIAL ANDROID APPLICATION</div>
+<h2 class="section-title">YOUR LIGHT.<br><span class="gradient">YOUR CONTROL.</span></h2>
+<p>Experience DUMAI LIGHTING through our Android application. Connect, customize, and control your RGB Matrix system with ease.</p>
+<a href="mailto:dumailighting@gmail.com" class="btn">APP COMING SOON</a>
+</div>
+</div>
 </section>
 </main>
 
 <footer>
-  <strong>DUMAI LIGHTING</strong>
-  <span>SMART RGB TECHNOLOGY</span>
-  <span>© 2026 DUMAI LIGHTING. ALL RIGHTS RESERVED.</span>
+<div class="container footer-row">
+<div><strong style="color:white">DUMAI LIGHTING</strong><br><br>Innovation in RGB Lighting Technology.</div>
+<div>© 2026 DUMAI LIGHTING. All rights reserved.</div>
+</div>
 </footer>
-
 </body>
 </html>
