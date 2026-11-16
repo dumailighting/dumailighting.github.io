@@ -1,12 +1,12 @@
-
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#070912">
-  <meta name="description" content="DUMAI LIGHTING — Premium RGB Lighting Technology. Experience the Future of Lighting.">
-  <title>DUMAI LIGHTING | Official Website</title>
+  <meta name="description" content="DUMAI LIGHTING — Teknologi Pencahayaan RGB Modern. Nyalakan Kreativitas, Ciptakan Perbedaan.">
+  <title>DUMAI LIGHTING | Situs Resmi</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,7 +70,7 @@
       background: #713bff;
     }
 
-    /* NAVIGATION */
+    /* NAVIGASI */
 
     header {
       position: fixed;
@@ -137,7 +137,7 @@
       cursor: pointer;
     }
 
-    /* HERO */
+    /* BERANDA */
 
     .hero {
       min-height: 760px;
@@ -259,7 +259,7 @@
       opacity: .6;
     }
 
-    /* GENERAL SECTION */
+    /* BAGIAN UMUM */
 
     section {
       padding: 105px 0;
@@ -289,7 +289,7 @@
       margin-top: 17px;
     }
 
-    /* STORE */
+    /* TOKO */
 
     #store {
       background: linear-gradient(180deg, #090d19, #080a13);
@@ -356,7 +356,7 @@
       letter-spacing: 3px;
     }
 
-    /* FEATURES */
+    /* FITUR */
 
     .feature-grid {
       display: grid;
@@ -395,14 +395,14 @@
       line-height: 1.8;
     }
 
-    /* ABOUT */
+    /* TENTANG KAMI */
 
     #about {
       background: #090d18;
     }
 
     .about-content {
-      max-width: 780px;
+      max-width: 850px;
       margin: auto;
       text-align: center;
     }
@@ -424,7 +424,35 @@
       margin-top: 23px;
     }
 
-    /* APPLICATION */
+    .about-values {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 45px;
+      text-align: left;
+    }
+
+    .about-value {
+      padding: 25px 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(145deg, rgba(18, 26, 45, .8), rgba(10, 13, 25, .8));
+    }
+
+    .about-value h3 {
+      color: var(--blue);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .about-value p {
+      margin-top: 0;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    /* APLIKASI */
 
     .app-panel {
       max-width: 850px;
@@ -461,7 +489,7 @@
       letter-spacing: 2px;
     }
 
-    /* CONTACT */
+    /* HUBUNGI KAMI */
 
     #contact {
       background: linear-gradient(180deg, #090d18, #070912);
@@ -523,7 +551,7 @@
       letter-spacing: 1px;
     }
 
-    /* RESPONSIVE */
+    /* RESPONSIF */
 
     @media (max-width: 850px) {
       .nav-links {
@@ -604,7 +632,8 @@
         padding: 78px 0;
       }
 
-      .feature-grid {
+      .feature-grid,
+      .about-values {
         grid-template-columns: 1fr;
       }
 
@@ -630,19 +659,19 @@
       <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#store">STORE</a></li>
-        <li><a href="#features">FEATURES</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#application">APPLICATION</a></li>
-        <li><a href="#contact" class="nav-contact">CONTACT</a></li>
+        <li><a href="#home">BERANDA</a></li>
+        <li><a href="#store">TOKO</a></li>
+        <li><a href="#features">FITUR</a></li>
+        <li><a href="#about">TENTANG KAMI</a></li>
+        <li><a href="#application">APLIKASI</a></li>
+        <li><a href="#contact" class="nav-contact">HUBUNGI KAMI</a></li>
       </ul>
     </div>
   </header>
 
   <main>
 
-    <!-- HOME -->
+    <!-- BERANDA -->
 
     <section class="hero" id="home">
       <div class="glow blue" style="top:100px;left:-150px"></div>
@@ -653,141 +682,184 @@
 
       <div class="container">
         <div class="hero-content">
-          <div class="eyebrow">NEXT GENERATION LIGHTING TECHNOLOGY</div>
+          <div class="eyebrow">TEKNOLOGI PENCAHAYAAN GENERASI BARU</div>
 
           <h1>
-            CONTROL<br>
-            YOUR <span>LIGHT.</span>
+            KENDALIKAN<br>
+            <span>CAHAYAMU.</span>
           </h1>
 
           <p class="hero-description">
-            Discover a new experience in RGB lighting technology.
-            Designed with innovation, precision, and a futuristic vision
-            by DUMAI LIGHTING.
+            Temukan pengalaman baru dalam teknologi pencahayaan RGB.
+            Dirancang dengan inovasi, ketelitian, dan visi masa depan
+            bersama DUMAI LIGHTING.
           </p>
 
           <div class="button-group">
-            <a href="#store" class="btn btn-primary">EXPLORE STORE</a>
-            <a href="#about" class="btn btn-outline">DISCOVER MORE</a>
+            <a href="#store" class="btn btn-primary">JELAJAHI TOKO</a>
+            <a href="#about" class="btn btn-outline">KENALI KAMI</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- STORE -->
+    <!-- TOKO -->
 
     <section id="store">
       <div class="container">
         <div class="section-heading">
-          <div class="eyebrow">OFFICIAL STORE</div>
-          <h2>OUR COLLECTION</h2>
+          <div class="eyebrow">TOKO RESMI</div>
+          <h2>KOLEKSI PRODUK KAMI</h2>
           <p>
-            Explore the world of DUMAI LIGHTING.
-            Our official product collection is being prepared.
+            Jelajahi dunia DUMAI LIGHTING.
+            Koleksi produk resmi kami sedang dalam tahap persiapan.
           </p>
         </div>
 
         <div class="coming-soon">
           <div class="coming-icon">✦</div>
-          <h3>COMING SOON</h3>
+          <h3>SEGERA HADIR</h3>
           <p>
-            Our products are being prepared.
-            Stay connected and be the first to discover
-            the next generation of lighting technology.
+            Produk-produk kami sedang dipersiapkan.
+            Tetap terhubung bersama kami dan jadilah yang pertama
+            mengenal inovasi teknologi pencahayaan generasi baru.
           </p>
-          <div class="coming-label">PRODUCT COLLECTION — IN PREPARATION</div>
+          <div class="coming-label">KOLEKSI PRODUK — DALAM PERSIAPAN</div>
         </div>
       </div>
     </section>
 
-    <!-- FEATURES -->
+    <!-- FITUR -->
 
     <section id="features">
       <div class="container">
         <div class="section-heading">
-          <div class="eyebrow">OUR TECHNOLOGY</div>
-          <h2>BUILT FOR THE FUTURE</h2>
+          <div class="eyebrow">TEKNOLOGI KAMI</div>
+          <h2>DIRANCANG UNTUK MASA DEPAN</h2>
           <p>
-            Innovation meets modern design.
-            Discover the principles behind DUMAI LIGHTING.
+            Perpaduan inovasi dan desain modern.
+            Kenali prinsip yang menjadi bagian dari DUMAI LIGHTING.
           </p>
         </div>
 
         <div class="feature-grid">
           <div class="feature-card">
             <div class="feature-icon">✧</div>
-            <h3>RGB EXPERIENCE</h3>
+            <h3>PENGALAMAN RGB</h3>
             <p>
-              A colorful lighting experience designed
-              to bring your environment to life.
+              Pengalaman pencahayaan penuh warna dengan beragam
+              efek yang dirancang untuk menghidupkan suasana.
             </p>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">⌘</div>
-            <h3>SMART CONTROL</h3>
+            <h3>KENDALI PINTAR</h3>
             <p>
-              Modern control concepts designed to make
-              lighting interaction more convenient.
+              Konsep kendali modern yang dirancang untuk
+              memudahkan pengguna mengatur pencahayaan.
             </p>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">◈</div>
-            <h3>MODERN DESIGN</h3>
+            <h3>DESAIN MODERN</h3>
             <p>
-              A futuristic design approach combining
-              technology, creativity, and aesthetics.
+              Pendekatan desain futuristik yang memadukan
+              teknologi, kreativitas, dan estetika.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- TENTANG KAMI -->
 
     <section id="about">
       <div class="container">
         <div class="about-content">
-          <div class="eyebrow">ABOUT DUMAI LIGHTING</div>
+          <div class="eyebrow">MENGENAL DUMAI LIGHTING</div>
+
           <h2>
-            MORE THAN LIGHT.<br>
-            <span>IT'S AN EXPERIENCE.</span>
+            LEBIH DARI SEKADAR CAHAYA.<br>
+            <span>INI ADALAH PENGALAMAN.</span>
           </h2>
 
           <p>
-            DUMAI LIGHTING is a lighting technology brand focused
-            on developing modern RGB lighting solutions and smart
-            lighting experiences. We believe technology should
-            be functional, creative, and beautifully designed.
+            <strong>DUMAI LIGHTING</strong> merupakan  yang berfokus
+            pada pengembangan teknologi pencahayaan LED RGB dan sistem
+            kendali pencahayaan modern.
+
             <br><br>
-            Our vision is to bring a new perspective to the world
-            of lighting through innovation and continuous development.
+
+            Kami menggabungkan teknologi, kreativitas, dan desain
+            untuk menghadirkan pengalaman pencahayaan yang menarik
+            serta dapat disesuaikan dengan kebutuhan pengguna.
+
+            <br><br>
+
+            Melalui pengembangan produk, sistem kendali digital,
+            dan aplikasi Android, kami terus berupaya menciptakan
+            inovasi baru di dunia pencahayaan LED.
+
+            <br><br>
+
+            Kami percaya bahwa cahaya bukan hanya tentang menerangi,
+            tetapi juga tentang menciptakan karakter, suasana,
+            dan pengalaman yang berbeda.
           </p>
+
+          <div class="about-values">
+
+            <div class="about-value">
+              <h3>VISI KAMI</h3>
+              <p>
+                Menjadi brand teknologi pencahayaan LED yang kreatif,
+                inovatif, dan terus berkembang.
+              </p>
+            </div>
+
+            <div class="about-value">
+              <h3>MISI KAMI</h3>
+              <p>
+                Mengembangkan produk LED dan teknologi kendali
+                yang praktis, kreatif, serta mudah digunakan.
+              </p>
+            </div>
+
+            <div class="about-value">
+              <h3>NILAI KAMI</h3>
+              <p>
+                Kreativitas, inovasi, kualitas, dan semangat
+                untuk terus menciptakan hal baru.
+              </p>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- APPLICATION -->
+    <!-- APLIKASI -->
 
     <section id="application">
       <div class="container">
         <div class="section-heading">
-          <div class="eyebrow">DUMAI LIGHTING APP</div>
-          <h2>CONTROL IN YOUR HANDS</h2>
+          <div class="eyebrow">APLIKASI DUMAI LIGHTING</div>
+          <h2>KENDALI DALAM GENGGAMAN</h2>
           <p>
-            Download the official DUMAI LIGHTING Android application
-            and control your RGB Matrix directly from your smartphone.
+            Unduh aplikasi resmi DUMAI LIGHTING untuk mengendalikan
+            RGB Matrix langsung melalui smartphone Android kamu.
           </p>
         </div>
 
         <div class="app-panel">
-          <h3>DUMAI LIGHTING ANDROID APP</h3>
+          <h3>APLIKASI ANDROID DUMAI LIGHTING</h3>
 
           <p>
-            Experience a new level of RGB Matrix control.
-            Access 60 lighting modes and manage your DUMAI LIGHTING
-            device directly from your Android smartphone.
+            Nikmati pengalaman kendali RGB Matrix yang lebih praktis.
+            Akses 60 pilihan mode pencahayaan dan atur perangkat
+            DUMAI LIGHTING langsung dari smartphone Android kamu.
           </p>
 
           <a
@@ -795,30 +867,32 @@
             class="btn btn-primary"
             download
             style="margin-top:30px;">
-            ↓ DOWNLOAD APK
+            ↓ UNDUH APLIKASI
           </a>
 
           <div class="app-status">
-            VERSION 1.0 — ANDROID
+            VERSI 1.0 — ANDROID
           </div>
 
           <p style="margin-top:18px;font-size:11px;">
-            Official Application • DUMAI LIGHTING
+            Aplikasi Resmi • DUMAI LIGHTING
           </p>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- HUBUNGI KAMI -->
 
     <section id="contact">
       <div class="container">
         <div class="contact-panel">
-          <div class="eyebrow">GET IN TOUCH</div>
-          <h2>LET'S CONNECT.</h2>
+          <div class="eyebrow">HUBUNGI KAMI</div>
+          <h2>MARI TERHUBUNG.</h2>
+
           <p>
-            Have questions or want to know more about DUMAI LIGHTING?
-            Contact our official team through WhatsApp.
+            Punya pertanyaan atau ingin mengetahui lebih lanjut
+            tentang DUMAI LIGHTING? Hubungi tim kami melalui
+            WhatsApp resmi.
           </p>
 
           <a
@@ -826,7 +900,7 @@
             target="_blank"
             rel="noopener noreferrer"
             class="btn btn-primary">
-            CONTACT VIA WHATSAPP
+            HUBUNGI VIA WHATSAPP
           </a>
         </div>
       </div>
@@ -839,13 +913,17 @@
   <footer>
     <div class="container footer-content">
       <div class="footer-brand">DUMAI <span>LIGHTING</span></div>
-      <p>© <span id="year"></span> DUMAI LIGHTING. ALL RIGHTS RESERVED.</p>
-      <div class="footer-tagline">EXPERIENCE THE FUTURE OF LIGHTING.</div>
+
+      <p>© <span id="year"></span> DUMAI LIGHTING. HAK CIPTA DILINDUNGI.</p>
+
+      <div class="footer-tagline">
+        NYALAKAN KREATIVITAS, CIPTAKAN PERBEDAAN.
+      </div>
     </div>
   </footer>
 
   <script>
-    // Mobile navigation
+    // Navigasi untuk perangkat mobile
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
 
@@ -855,7 +933,7 @@
       menuToggle.textContent = isOpen ? "✕" : "☰";
     });
 
-    // Close mobile menu after selecting a section
+    // Tutup menu setelah memilih bagian website
     document.querySelectorAll(".nav-links a").forEach(function(link) {
       link.addEventListener("click", function() {
         navLinks.classList.remove("show");
@@ -864,9 +942,10 @@
       });
     });
 
-    // Automatic copyright year
+    // Tahun hak cipta otomatis
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
 </body>
 </html>
+```
