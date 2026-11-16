@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#070912">
-  <meta name="description" content="DUMAI LIGHTING — Teknologi Pencahayaan RGB Modern. Nyalakan Kreativitas, Ciptakan Perbedaan.">
+  <meta name="description" content="DUMAI LIGHTING — Dealer resmi PRO7. Mengutamakan keselamatan, kenyamanan, dan ketenangan berkendara.">
   <title>DUMAI LIGHTING | Situs Resmi</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,13 +62,8 @@
       z-index: 0;
     }
 
-    .glow.blue {
-      background: #087cff;
-    }
-
-    .glow.purple {
-      background: #713bff;
-    }
+    .glow.blue { background: #087cff; }
+    .glow.purple { background: #713bff; }
 
     /* NAVIGASI */
 
@@ -96,7 +91,8 @@
       white-space: nowrap;
     }
 
-    .logo span {
+    .logo span,
+    .footer-brand span {
       color: var(--blue);
       text-shadow: 0 0 18px rgba(54, 170, 255, .65);
     }
@@ -104,25 +100,24 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 29px;
+      gap: 25px;
       list-style: none;
     }
 
     .nav-links a {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: 1.2px;
+      letter-spacing: 1px;
       color: #aab3c9;
       transition: .25s;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
+    .nav-links a:hover {
       color: var(--blue);
     }
 
     .nav-contact {
-      padding: 11px 17px;
+      padding: 11px 15px;
       border: 1px solid rgba(54, 170, 255, .5);
       border-radius: 5px;
       color: var(--blue) !important;
@@ -309,8 +304,6 @@
         radial-gradient(ellipse at 50% 0%, rgba(43, 118, 255, .13), transparent 65%),
         rgba(13, 18, 32, .75);
       box-shadow: 0 20px 70px rgba(0,0,0,.2);
-      position: relative;
-      overflow: hidden;
     }
 
     .coming-icon {
@@ -353,7 +346,7 @@
       color: var(--blue);
       font-size: 10px;
       font-weight: 800;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
     }
 
     /* FITUR */
@@ -402,7 +395,7 @@
     }
 
     .about-content {
-      max-width: 850px;
+      max-width: 900px;
       margin: auto;
       text-align: center;
     }
@@ -417,7 +410,7 @@
       color: var(--blue);
     }
 
-    .about-content p {
+    .about-content > p {
       color: var(--muted);
       font-size: 14px;
       line-height: 2;
@@ -447,9 +440,103 @@
     }
 
     .about-value p {
-      margin-top: 0;
+      color: var(--muted);
       font-size: 12px;
       line-height: 1.8;
+    }
+
+    /* PERJALANAN KAMI */
+
+    #journey {
+      background: linear-gradient(180deg, #090d18, #070912);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline {
+      max-width: 850px;
+      margin: auto;
+      position: relative;
+      padding: 10px 0;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 22px;
+      top: 15px;
+      bottom: 15px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--blue), var(--purple), var(--blue));
+      box-shadow: 0 0 15px rgba(54, 170, 255, .4);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 38px 65px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 12px;
+      top: 5px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      border: 4px solid #090d18;
+      box-shadow: 0 0 18px rgba(54, 170, 255, .65);
+    }
+
+    .timeline-card {
+      padding: 27px 30px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: linear-gradient(145deg, rgba(18, 26, 45, .9), rgba(10, 13, 25, .9));
+      transition: .3s;
+    }
+
+    .timeline-card:hover {
+      transform: translateX(5px);
+      border-color: rgba(54, 170, 255, .5);
+    }
+
+    .timeline-year {
+      color: var(--blue);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .timeline-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 17px;
+      margin-bottom: 13px;
+    }
+
+    .timeline-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .journey-ending {
+      text-align: center;
+      margin: 45px auto 0;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .journey-ending strong {
+      color: var(--blue);
     }
 
     /* APLIKASI */
@@ -536,10 +623,6 @@
       letter-spacing: 1px;
     }
 
-    .footer-brand span {
-      color: var(--blue);
-    }
-
     footer p {
       color: #727d96;
       font-size: 11px;
@@ -555,7 +638,7 @@
 
     @media (max-width: 850px) {
       .nav-links {
-        gap: 17px;
+        gap: 15px;
       }
 
       .nav-links a {
@@ -642,6 +725,26 @@
         padding: 48px 20px;
       }
 
+      .timeline::before {
+        left: 12px;
+      }
+
+      .timeline-item {
+        padding-left: 43px;
+      }
+
+      .timeline-dot {
+        left: 2px;
+      }
+
+      .timeline-card {
+        padding: 23px 20px;
+      }
+
+      .timeline-card h3 {
+        font-size: 15px;
+      }
+
       .footer-content {
         flex-direction: column;
         text-align: center;
@@ -663,6 +766,7 @@
         <li><a href="#store">TOKO</a></li>
         <li><a href="#features">FITUR</a></li>
         <li><a href="#about">TENTANG KAMI</a></li>
+        <li><a href="#journey">PERJALANAN</a></li>
         <li><a href="#application">APLIKASI</a></li>
         <li><a href="#contact" class="nav-contact">HUBUNGI KAMI</a></li>
       </ul>
@@ -690,8 +794,8 @@
           </h1>
 
           <p class="hero-description">
-            Temukan pengalaman baru dalam teknologi pencahayaan RGB.
-            Dirancang dengan inovasi, ketelitian, dan visi masa depan
+            Temukan pengalaman baru dalam teknologi pencahayaan.
+            Mengutamakan inovasi, ketelitian, keselamatan, dan kenyamanan
             bersama DUMAI LIGHTING.
           </p>
 
@@ -745,28 +849,28 @@
         <div class="feature-grid">
           <div class="feature-card">
             <div class="feature-icon">✧</div>
-            <h3>PENGALAMAN RGB</h3>
+            <h3>PENCAHAYAAN OTOMOTIF</h3>
             <p>
-              Pengalaman pencahayaan penuh warna dengan beragam
-              efek yang dirancang untuk menghidupkan suasana.
+              Solusi pencahayaan untuk membantu pengendara
+              mendapatkan pengalaman berkendara yang lebih nyaman.
             </p>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">⌘</div>
-            <h3>KENDALI PINTAR</h3>
+            <h3>TEKNOLOGI KENDALI</h3>
             <p>
-              Konsep kendali modern yang dirancang untuk
-              memudahkan pengguna mengatur pencahayaan.
+              Mengembangkan sistem kendali modern yang dirancang
+              untuk memudahkan pengguna mengatur pencahayaan.
             </p>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">◈</div>
-            <h3>DESAIN MODERN</h3>
+            <h3>LAYANAN PROFESIONAL</h3>
             <p>
-              Pendekatan desain futuristik yang memadukan
-              teknologi, kreativitas, dan estetika.
+              Terus meningkatkan keterampilan, kualitas sumber daya
+              manusia, dan peralatan kerja.
             </p>
           </div>
         </div>
@@ -781,32 +885,47 @@
           <div class="eyebrow">MENGENAL DUMAI LIGHTING</div>
 
           <h2>
-            LEBIH DARI SEKADAR CAHAYA.<br>
-            <span>INI ADALAH PENGALAMAN.</span>
+            BERAWAL DARI LANGKAH KECIL.<br>
+            <span>TERUS TUMBUH DAN BERKEMBANG.</span>
           </h2>
 
           <p>
-            <strong>DUMAI LIGHTING</strong> merupakan  yang berfokus
-            pada pengembangan teknologi pencahayaan LED RGB dan sistem
-            kendali pencahayaan modern.
+            <strong>DUMAI LIGHTING</strong> merupakan sebuah toko
+            sekaligus dealer resmi Brand PRO7 yang mulai berkembang
+            sejak tahun 2021.
 
             <br><br>
 
-            Kami menggabungkan teknologi, kreativitas, dan desain
-            untuk menghadirkan pengalaman pencahayaan yang menarik
-            serta dapat disesuaikan dengan kebutuhan pengguna.
+            Perjalanan kami dimulai dari rumah ke rumah. Dengan
+            semangat, kerja keras, dan kepercayaan pelanggan, kami
+            terus berusaha memberikan pelayanan terbaik kepada
+            sesama pengguna otomotif.
 
             <br><br>
 
-            Melalui pengembangan produk, sistem kendali digital,
-            dan aplikasi Android, kami terus berupaya menciptakan
-            inovasi baru di dunia pencahayaan LED.
+            Seiring berjalannya waktu dan kesempatan yang diberikan,
+            pada tahun 2022 kami berhasil mengembangkan usaha ini
+            dengan mendirikan toko bernama DUMAI LIGHTING.
 
             <br><br>
 
-            Kami percaya bahwa cahaya bukan hanya tentang menerangi,
-            tetapi juga tentang menciptakan karakter, suasana,
-            dan pengalaman yang berbeda.
+            Kami mendirikan DUMAI LIGHTING bukan hanya untuk
+            menjalankan sebuah usaha, tetapi juga sebagai wadah
+            untuk berbagi ilmu, pengalaman, dan keberkahan kepada
+            sesama pengguna otomotif.
+
+            <br><br>
+
+            Tujuan kami adalah membantu pengendara agar dapat
+            berkendara dengan lebih <strong>AMAN, NYAMAN, DAN TENANG</strong>,
+            khususnya pada malam hari.
+
+            <br><br>
+
+            Hingga saat ini, kami terus berupaya berkembang dan
+            mengikuti kemajuan teknologi melalui peningkatan
+            kualitas sumber daya manusia, keterampilan, serta
+            penggunaan peralatan kerja yang semakin baik.
           </p>
 
           <div class="about-values">
@@ -814,29 +933,106 @@
             <div class="about-value">
               <h3>VISI KAMI</h3>
               <p>
-                Menjadi brand teknologi pencahayaan LED yang kreatif,
-                inovatif, dan terus berkembang.
+                Menjadi usaha pencahayaan otomotif yang terus
+                berkembang, terpercaya, dan memberikan manfaat
+                bagi para pengguna otomotif.
               </p>
             </div>
 
             <div class="about-value">
               <h3>MISI KAMI</h3>
               <p>
-                Mengembangkan produk LED dan teknologi kendali
-                yang praktis, kreatif, serta mudah digunakan.
+                Berbagi ilmu dan pengalaman, meningkatkan kualitas
+                pelayanan, serta menghadirkan solusi pencahayaan
+                untuk mendukung kenyamanan berkendara.
               </p>
             </div>
 
             <div class="about-value">
               <h3>NILAI KAMI</h3>
               <p>
-                Kreativitas, inovasi, kualitas, dan semangat
-                untuk terus menciptakan hal baru.
+                Mengutamakan kejujuran, pelayanan, keselamatan,
+                kenyamanan, pembelajaran, dan semangat untuk
+                terus berkembang.
               </p>
             </div>
 
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- PERJALANAN KAMI -->
+
+    <section id="journey">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">SEJARAH DAN PERKEMBANGAN</div>
+          <h2>PERJALANAN DUMAI LIGHTING</h2>
+          <p>
+            Setiap perjalanan besar dimulai dari langkah kecil.
+            Inilah perjalanan kami dalam membangun DUMAI LIGHTING.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+              <div class="timeline-year">2021</div>
+              <h3>AWAL SEBUAH PERJALANAN</h3>
+              <p>
+                DUMAI LIGHTING memulai perjalanannya dari rumah ke rumah.
+                Dengan semangat, kerja keras, dan tekad untuk berkembang,
+                kami mulai membangun kepercayaan serta memberikan
+                pelayanan kepada sesama pengguna otomotif.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+              <div class="timeline-year">2022</div>
+              <h3>LANGKAH MENUJU PERKEMBANGAN</h3>
+              <p>
+                Sebuah kesempatan dan kepercayaan membawa kami
+                ke tahap berikutnya. Pada tahun ini, kami berhasil
+                mendirikan toko bernama DUMAI LIGHTING sebagai tempat
+                untuk memberikan pelayanan, berbagi ilmu, dan
+                pengalaman kepada pelanggan.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+              <div class="timeline-year">SAAT INI</div>
+              <h3>TERUS BERKEMBANG DAN BERINOVASI</h3>
+              <p>
+                Kami terus berupaya mengikuti perkembangan dunia
+                otomotif dan teknologi. Peningkatan kualitas sumber
+                daya manusia, keterampilan, serta penggunaan
+                peralatan kerja menjadi bagian dari komitmen kami
+                untuk memberikan pelayanan yang semakin baik.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="journey-ending">
+          Perjalanan ini masih terus berlanjut.
+          <br>
+          <strong>Terima kasih telah menjadi bagian dari DUMAI LIGHTING.</strong>
+        </div>
+
       </div>
     </section>
 
@@ -917,7 +1113,7 @@
       <p>© <span id="year"></span> DUMAI LIGHTING. HAK CIPTA DILINDUNGI.</p>
 
       <div class="footer-tagline">
-        NYALAKAN KREATIVITAS, CIPTAKAN PERBEDAAN.
+        TERUS BERKEMBANG, TERUS BERINOVASI.
       </div>
     </div>
   </footer>
